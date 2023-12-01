@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+@import './variables.css';
+@import './utilities.css';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--pure);
+    background: var(--primary);
+}
+
+header {
+    min-height: 10vh;
+    background-size: cover;
+}
+
+header nav {
+    padding: 20px 40px 20px 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+header nav .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .nav-right a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-right: 30px;
+}
+
+header nav .nav-right a:hover {
+    transition: all .45s ease-in;
+    color: rgb(92, 99, 98);
+    cursor: pointer;
+}
+
+header nav .nav-right .search>div {
+    background: rgb(76, 75, 75);
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin-left: 500px;
+}
+
+header nav .nav-right .search>div input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+header nav .nav-right .search>div img {
+    padding-right: 16px;
+}
+
+.social div {
+    border: 2px solid var(--pure);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    opacity: 0;
+}
+
+@keyframes moveIn {
+    from {
+        transform: translateX(-100px);
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.social svg path {
+    fill: var(--pure);
+}
+
+.social div:hover svg path {
+    fill: var(--dark);
+    transition: all .5s ease-in-out;
+}
+
+.social div:hover {
+    background: var(--pure);
+}
+
+.hero {
+    position: relative;
+}
+
+.social {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 1px solid var(--gray);
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+.hero .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 80px);
+}
+
+.hero .cta h1 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero .cta>div {
+    flex: 1;
+}
+
+.hero .cta .left-section {
+    padding: 0 60px 0 30px;
+}
+
+.hero .cta .right-section img {
+    height: 70vh;
+    transform: rotate(20deg);
+    animation: moveInSpace 12s ease-in-out infinite alternate;
+}
+
+@keyframes moveInSpace {
+    50% {
+        transform: translateY(100px) rotate(-30deg) scale(0.8);
+    }
+}
+
+section.strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--dark);
+    padding: 50px 0;
+}
+
+section.rocket {
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    grid-gap: 80px;
+    padding: 100px 0;
+}
+
+section.rocket .rocket-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.rocket .rocket-body span {
+    font-size: 0;
+    position: relative;
+}
+
+section.rocket .rocket-body span img {
+    width: 100%;
+}
+
+section.rocket .block {
+    width: 70%;
+}
+
+section.rocket .block h1 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+section.rocket .block .with-underline {
+    position: relative;
+    margin-bottom: 38px;
+}
+
+section.rocket .block .with-underline:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    display: block;
+    width: 38%;
+    height: 2px;
+    background: var(--pure);
+}
+
+section.rocket .block h1.with-underline:before {
+    width: 20%;
+}
+
+section.rocket p {
+    line-height: 1.6;
+}
+
+section.rocket .block h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+section.rocket .block.payload {
+    padding-top: 130px;
+}
+
+section.rocket .block.payload h2 {
+    padding-left: 80px;
+}
+
+section.rocket .block.dragon {
+    padding-top: 120px;
+}
+
+section.rocket .block button {
+    margin-top: 30px;
+}
+
+section.rocket .block.composite {
+    padding-top: 60px;
+}
+
+section.rocket .block.first-stage {
+    padding-top: 60px;
+}
+
+section.rocket .block.capacity {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+}
+
+section.rocket .block.capacity>div:first-child {
+    margin-right: 40px;
+}
+
+section.rocket .block.capacity h4 {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+section.rocket .block.capacity h6 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+section.rocket .block.capacity h6 small {
+    font-size: 12px;
+}
+
+section.rocket .block.second-stage {
+    padding-top: 60px;
+}
+
+section.rocket .right-block .block.capacity {
+    padding-top: 120px;
+}
+
+section.rocket .right-block .block.capacity.single {
+    padding-top: 40px;
+}
+
+section.rocket .right-block .block.engines {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+section.rocket .right-block .block.engines img {
+    width: 180px;
+}
+
+section.rocket .right-block .block.marine {
+    padding-top: 100px;
+    width: 70%;
+}
+
+section.rocket .right-block .block.marine h2 {
+    font-size: 14px;
+    padding-left: 100px;
+    margin-bottom: 26px;
+}
+
+section.rocket .right-block .floating-graphics {
+    position: sticky;
+    float: right;
+    top: 60px;
+    margin-right: -80px;
+}
+
+section.rocket .right-block .floating-graphics img {
+    height: 300px;
+}
+
+section.rocket .rocket-body span:after,
+section.rocket .rocket-body span:nth-child(3):before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--pure);
+    transition: width 1s ease-in-out;
+}
+
+section.rocket .rocket-body span:nth-child(1):after {
+    bottom: 14px;
+    left: 96%;
+}
+
+section.rocket .rocket-body span:nth-child(2):after {
+    bottom: 62%;
+    right: 100%;
+}
+
+section.rocket .rocket-body span:nth-child(3):after {
+    bottom: 64%;
+    right: 90%;
+}
+
+section.rocket .rocket-body span:nth-child(3):before {
+    bottom: 36%;
+    left: 90%;
+}
+
+section.rocket .rocket-body span.active:nth-child(1):after {
+    width: 120px;
+}
+
+section.rocket .rocket-body span.active:nth-child(2):after {
+    width: 180px;
+}
+
+section.rocket .rocket-body span.active:nth-child(3):after {
+    width: 200px;
+}
+
+section.rocket .rocket-body span.active:nth-child(3):before {
+    width: 160px;
+}
+
+@keyframes jump {
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+section.rocket .rocket-body span.active:nth-child(1) {
+    animation: jump 1s ease-in-out forwards;
+}
+
+footer {
+    background: var(--dark);
+    padding: 60px 0;
+    background-color: #565454;
+}
+
+footer>div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer .copyright span {
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+footer .copyright img {
+    height: 30px;
+}
+
+footer h1 {
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+footer h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--pure);
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li:nth-child(even) {
+    margin: 10px 0;
+}
+
+footer ul li a {
+    color: var(--mild);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all .3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: var(--pure);
+}
+
+footer .footer-socials a {
+    margin-right: 20px;
+    font-size: 15px;
+    color: var(--mild);
+}
+
+footer .footer-socials a:hover {
+    color: var(--pure);
+}
+.btn-primary {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px; /* Curvy edges */
+    font-size: 20px; /* Larger text for a bigger button */
+    text-decoration: none; /* Removes underline from the link */
+    display: inline-block; /* Allows padding and height modifications */
+}
+
+.btn-primary:hover {
+    background-color: black; /* Slightly darker shade for hover effect */
+    color: lightgray;
+}
+body {
+    background-image: url('bg.png');
+    background-size: cover; /* Cover the entire area */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: makes the background fixed during scroll */
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.rocket-body {
+    animation: float 3s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
+    .some-class {
+        width: 100%;
+        /* other styles */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for mobile devices */
+    .some-class {
+        /* adjustments for smaller screens */
+    }
+}
+.left-block, .right-block {
+    padding: 0 30px; /* Adjust padding as needed */
+    margin: 0 auto;  /* Centers the block */
+}
+.left-block, .right-block {
+    width: 100%; /* Adjust based on your layout needs */
+}
+.rocket.container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: flex-start; /* Adjust as needed */
+}
+
+.block {
+    text-align: left; /* Or right as needed */
+}
+.strip {
+    display: flex;        /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;  /* Horizontally centers the items in the container */
+    justify-content: center; /* Vertically centers the items in the container */
+    height: 25vh;       /* Optional: sets the height of the section to fill the viewport */
+    text-align: center;  /* Ensures the text inside the elements is centered */
+}
+
+body {
+    color: white; /* Sets the default text color to white for the whole website */
+}
+
+/* If you have specific classes or elements where you want to ensure the text color is white, you can add them as well. For example: */
+.strip, .btn, h1, h2, h3, p {
+    color: white;
+}
+header, 
+header * { /* The '*' selects all child elements within the header */
+    color: white; /* Sets text color to white */
+}
+.rocket.container {
+    display: flex;
+    justify-content: space-between; /* This will space out the blocks evenly */
+    align-items: start; /* Aligns the content to the top */
+}
+

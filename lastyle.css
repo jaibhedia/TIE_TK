@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 10;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, rgb(65, 62, 62), rgba(0, 0, 0, 0.2));
+    color: black;
+}
+
+header {
+    min-height: 10vh;
+    background-size: cover;
+}
+
+header nav {
+    padding: 20px 40px 20px 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+header nav .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .nav-right a {
+    text-decoration: none;
+    color: white;
+    margin-right: 30px;
+}
+
+header nav .nav-right a:hover {
+    transition: all .45s ease-in;
+    color: turquoise;
+    cursor: pointer;
+}
+
+header nav .nav-right .search>div {
+    background: black;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin-left: 500px;
+}
+
+header nav .nav-right .search>div input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+}
+
+#rocket{
+    width: 100%;
+}
+
+.center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+.launches {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.btn{
+    background-color: rgb(159, 226, 43);
+}
+
+footer {
+    background: var(--dark);
+    padding: 60px 0;
+    background-color: #d9d9d9;
+}
+
+footer>div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer .copyright span {
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+footer .copyright img {
+    height: 30px;
+}
+
+footer h1 {
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+footer h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--pure);
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li:nth-child(even) {
+    margin: 10px 0;
+}
+
+footer ul li a {
+    color: var(--mild);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all .3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: var(--pure);
+}
+
+footer .footer-socials a {
+    margin-right: 20px;
+    font-size: 15px;
+    color: var(--mild);
+}
+
+footer .footer-socials a:hover {
+    color: var(--pure);
+}
+.btn-primary {
+    background-color: darkblue;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px; /* Curvy edges */
+    font-size: 20px; /* Larger text for a bigger button */
+    text-decoration: none; /* Removes underline from the link */
+    display: inline-block; /* Allows padding and height modifications */
+}
+
+.btn-primary:hover {
+    background-color: black; /* Slightly darker shade for hover effect */
+    color: lightgray;
+}
+.launches {
+    /* Styles for the container */
+    width: 100%; /* Set the width of the container to 100% of its parent */
+}
+
+.launch-img {
+    width: 100%; /* This will make the image's width dynamic, adjusting to the container's width */
+    max-width: 100%; /* Prevents the image from exceeding the width of its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
